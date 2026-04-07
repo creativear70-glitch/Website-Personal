@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: #0b0f19;
+        color: white;
+      }
+
+      /* HEADER */
+      header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 60px;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 15, 25, 0.6);
+        z-index: 100;
+      }
+
+      header h2 {
+        font-weight: 600;
+      }
+
+      nav a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: #9ca3af;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: white;
+      }
+
+      /* HERO */
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 60px;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        border-radius: 20px;
+        margin: 20px;
+        animation: fadeUp 1s ease;
+      }
+
+      /* TEXT */
+      .hero-text {
+        max-width: 500px;
+      }
+
+      .intro {
+        color: #9ca3af;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        margin: 10px 0;
+      }
+
+      .hero h1 span {
+        color: #60a5fa;
+      }
+
+      .desc {
+        color: #cbd5f5;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+
+      /* BUTTON */
+      .btn-group {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .btn.primary {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .btn.primary:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+      }
+
+      .btn.secondary {
+        border: 1px solid #3b82f6;
+        color: #3b82f6;
+      }
+
+      .btn.secondary:hover {
+        background: #3b82f6;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* IMAGE */
+      .hero-img img {
+        width: 300px;
+        border-radius: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        transition: 0.4s;
+      }
+
+      .hero-img img:hover {
+        transform: scale(1.05);
+      }
+
+      /* ABOUT */
+      .about {
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeUp 1.2s ease;
+      }
+
+      .about-box {
+        margin-top: 20px;
+        padding: 25px;
+        background: #111827;
+        border-radius: 15px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #1f2937;
+        transition: 0.3s;
+      }
+
+      .about-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .about-box p {
+        color: #9ca3af;
+        line-height: 1.7;
+      }
+
+      /* CONTACT */
+      .contact {
+        text-align: center;
+        padding: 50px;
+        animation: fadeUp 1.4s ease;
+      }
+
+      .contact a {
+        display: inline-block;
+        margin: 8px;
+        padding: 10px 18px;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        color: #d1d5db;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .contact a:hover {
+        background: #1f2937;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      /* ANIMATION */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        header {
+          padding: 20px;
+        }
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 20px;
+        }
+
+        .hero-img {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>MyProfile</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <p class="intro">Welcome to my portfolio</p>
+        <h1>Hello, I'm <span>Aherdi</span></h1>
+        <p class="desc">
+          Saya seorang Web Developer yang membuat website modern dan
+          profesional.
+        </p>
+
+        <div class="btn-group">
+          <a href="#" class="btn primary">Download CV</a>
+          <a href="#" class="btn secondary">Lihat Project</a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="aherdi28.png" />
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Tentang Saya</h2>
+
+      <div class="about-box">
+        <p>
+          Saya adalah seorang web developer yang fokus membuat website modern
+          dan responsif. Saat ini saya terus mengembangkan skill di bidang HTML,
+          CSS, dan JavaScript dll juga untuk menciptakan tampilan yang menarik
+          dan profesional.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Kontak</h2>
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+    </section>
+  </body>
+</html>
